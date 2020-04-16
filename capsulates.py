@@ -1,9 +1,9 @@
 #coding:utf-8
 
 """
-CLASSES
+PYTHON
 
-méthodes
+Propriétés d'encapsulation
 """
 
 class Humain:
@@ -11,55 +11,66 @@ class Humain:
     Classe des êtres humains
     """
 
-    unIndividu = 0
+    population = 0
     lieuHabitation = "Terre"
-    def __init__(self, sonNom, sonAge):
-        # print("Creation d'un être humain", self)
-        self.nom = sonNom
-        self.age = sonAge
-        Humain.unIndividu += 1
 
-    # Methodes:
-    # - Methode standard ou d'instanciation
+    def __init__(self, nom, age):
+        print("Creation d'un être humain...")
+        self._nom = nom
+        self._age = age
+        Humain.population += 1
+    def showPopulation(cls):
+        word = "individus"
+        if Humain.population <= 1:
+            word = "individu"
+        return "il y a {} {}".format(Humain.population, word)
+    showPopulation = classmethod(showPopulation)
 
-    def parler(self, sonMessage):
-        print("{}: {}".format(self.nom, sonMessage))
-        
-    # - Methode de classe 
-    def changerHabitation(cls, nouvelleHabitation):
-        Humain.lieuHabitation = nouvelleHabitation
+    def _getNom(self):
+        # print("Récupération prohibée")
+        try: 
+            return self._nom
+        except AttributeError:
+            return print("Nom effacé.")
 
-    changerHabitation = classmethod(changerHabitation)
-        
-    # - Methode statique
-    def definition():
-        print("L'être humain est reconnu comme étant l'animal le plus intelligent de la planète.")
-    definition = staticmethod(definition)
-    
-print("Lancement du programme...\n")
-Dave = Humain("David", 31)
-print(Humain.unIndividu)
-Dave.parler("Bonjour, tout le monde! Je m'appelle {} et j'ai {} ans.".format(Dave.nom, Dave.age))
-Dave.parler("Au fait j'habite sur {}.".format(Humain.lieuHabitation))
-print("\nQuelques temps plus tard...")
-Dave.changerHabitation("Mars")
-Dave.parler("J'ai déménagé, maintenant j'habite {}.".format(Humain.lieuHabitation))
-Humain.definition()
+    def _setNom(self, nouveauNom):
+        if nouveauNom < 0:
+            self._nom = 0
+        else:
+            self._nom = nouveauNom
 
+    def _delNom(self):
+        del self._nom
 
-# print("{} de sexe {}".format(Humain().name, Femme.sexe))
+    nom = property(_getNom, _setNom, _delNom, "Je nomme la personne")
 
-# class Continent:
-#     continents = 0
-#     def __init__(self, c_nom):
-#         self.nom = c_nom
-#         Continent.continents += 1
+    def _getAge(self):
+        # print("Récupération prohibée")
+        try:
+            word = ""
+            if self._age <= 1:
+                word = "an"
+            else:
+                word = "ans"
+            return "{} {}".format(self._age, word)
+        except AttributeError:
+            return print("Age effacé.")
 
-# Eurasie = Continent("Eurasie")
-# Amerique = Continent("Amérique")
-# Australie = Continent("Australie")
-# Afrique = Continent("Afrique")
-# Arctique = Continent("Arctique")
-# Antarctique = Continent("Antarctique")
-# print("Nombre de continents:", Continent.continents)
+    def _setAge(self, nouvelAge):
+        if nouvelAge < 0:
+            self._age = 0
+        else:
+            self._age = nouvelAge
+
+    def _delAge(self):
+        del self._age
+
+    age = property(_getAge, _setAge, _delAge, "Je représente l'âge de la personne")
+
+# h1 = Humain("Dave", 31)
+h2 = Humain("Fabezio", 47)
+# h1.age = 1
+# print("{} a {}".format(h1.nom, h1.age))
+print("{} a {}".format(h2.nom, h2.age))
+print(Humain.showPopulation())
 
