@@ -9,39 +9,39 @@ Classes héritées
 
 # classe mère
 class Vehicule:
-    def __init__(self, nom_vcl, carburant_vcl):
-        self.nom = nom_vcl
-        self.carburant = carburant_vcl
+  def __init__(self, nom_vcl, carburant_vcl):
+    self.nom = nom_vcl
+    self.carburant = carburant_vcl
 
-    def montrerVehicule(self):
-        return self.nom
-    def deplacement(self):
-        return "Je me déplace..."
+  def montrerVehicule(self):
+    return self.nom
+  def deplacement(self):
+    return "Je me déplace..."
 
 # classe fille
 class Voiture(Vehicule):
-    def __init__(self, nom_voit, carburant_voit, puissance, roues=4):
-        Vehicule.__init__(self, nom_voit, carburant_voit)
-        self.puissance = puissance
-        self.roues = roues
-    
-    def deplacement(self):
-        return "Je roule..."
+  def __init__(self, nom_voit, carburant_voit, puissance, roues=4):
+      Vehicule.__init__(self, nom_voit, carburant_voit)
+      self.puissance = puissance
+      self.roues = roues
+  
+  def deplacement(self):
+      return "Je roule..."
 
 class Avion(Vehicule):
-    def __init__(self, nom, carburant, transport):
-        Vehicule.__init__(self, nom, carburant)
-        self.transport = transport
+  def __init__(self, nom, carburant, transport):
+    Vehicule.__init__(self, nom, carburant)
+    self.transport = transport
 
-    def deplacement(self):
-        return "Je vole!"
+  def deplacement(self):
+    return "Je vole!"
 
 class Bateau(Vehicule):
-    pass
+  pass
 
 # Classe à héritage multiple:
 class Amphibie(Voiture, Bateau):
-    pass
+  pass
 
 raptor = Avion("F22 Raptor", 2400, "Arsenal ")
 print(raptor.nom)

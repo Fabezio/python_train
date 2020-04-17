@@ -31,10 +31,10 @@ classes
 # # print("{} de sexe {}".format(Humain().name, Femme.sexe))
 
 class Continent:
-    continents = 0
-    def __init__(self, c_nom):
-        self.nom = c_nom
-        Continent.continents += 1
+	continents = 0
+	def __init__(self, c_nom):
+		self.nom = c_nom
+		Continent.continents += 1
 
 Eurasie = Continent("Eurasie")
 Amerique = Continent("Amérique")

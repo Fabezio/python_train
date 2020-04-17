@@ -7,35 +7,35 @@ méthodes
 """
 
 class Humain:
-    """
-    Classe des êtres humains
-    """
+  """
+  Classe des êtres humains
+  """
 
-    unIndividu = 0
-    lieuHabitation = "Terre"
-    def __init__(self, sonNom, sonAge):
-        # print("Creation d'un être humain", self)
-        self.nom = sonNom
-        self.age = sonAge
-        Humain.unIndividu += 1
+  unIndividu = 0
+  lieuHabitation = "Terre"
+  def __init__(self, sonNom, sonAge):
+    # print("Creation d'un être humain", self)
+    self.nom = sonNom
+    self.age = sonAge
+    Humain.unIndividu += 1
 
-    # Methodes:
-    # - Methode standard ou d'instanciation
+  # Methodes:
+  # - Methode standard ou d'instanciation
 
-    def parler(self, sonMessage):
-        print("{}: {}".format(self.nom, sonMessage))
-        
-    # - Methode de classe 
-    def changerHabitation(cls, nouvelleHabitation):
-        Humain.lieuHabitation = nouvelleHabitation
+  def parler(self, sonMessage):
+    print("{}: {}".format(self.nom, sonMessage))
+      
+  # - Methode de classe 
+  def changerHabitation(cls, nouvelleHabitation):
+    Humain.lieuHabitation = nouvelleHabitation
 
-    changerHabitation = classmethod(changerHabitation)
-        
-    # - Methode statique
-    def definition():
-        print("L'être humain est reconnu comme étant l'animal le plus intelligent de la planète.")
-    definition = staticmethod(definition)
-    
+  changerHabitation = classmethod(changerHabitation)
+      
+  # - Methode statique
+  def definition():
+    print("L'être humain est reconnu comme étant l'animal le plus intelligent de la planète.")
+  definition = staticmethod(definition)
+  
 print("Lancement du programme...\n")
 Dave = Humain("David", 31)
 print(Humain.unIndividu)
