@@ -23,7 +23,7 @@ class Humain:
         word = "individus"
         if Humain.population <= 1:
             word = "individu"
-        return "il y a {} {}".format(Humain.population, word)
+        return "Il y a {} {}".format(Humain.population, word)
     showPopulation = classmethod(showPopulation)
 
     def _getNom(self):
