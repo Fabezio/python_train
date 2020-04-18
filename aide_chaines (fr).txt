@@ -1,0 +1,396 @@
+L'aide sur la classe str dans le module builtins :
+
+classe str (objet)
+    str (objectent = ")-> str
+    str (bytes_or_buffer [, en encodant [, les erreurs]])-> str
+      
+    Créez un nouvel objet de ficelle de l'objet donné. En encodant ou
+    les erreurs sont spécifiées, alors l'objet doit exposer un butoir de données
+    ce sera décodé en utilisant encoding donné et le dresseur d'erreur.
+    Autrement, renvoie le résultat d'object. __ str __ () (si défini)
+    ou repr (objet).
+    encoding par défaut à sys.getdefaultencoding().
+    le gestion des erreurs est réglée sur 'strict'.
+      
+    Méthodes définies ici :
+      
+    __ ajouter __ (self, la valeur,/)
+        renvoie self et la valeur.
+      
+    __ contient __ (self, la clé,/)
+        Le retour saisit self.
+      
+    __ eq __ (self, la valeur,/)
+        renvoie self == la valeur.
+      
+    __ formater __ (self, format_spec,/)
+        renvoie une version formatée da la  chaîne de caractères comme décrit par format_spec.
+      
+    __ ge __ (self, la valeur,/)
+        renvoie self> =value.
+      
+    __ getattribute __ (self, le nom,/)
+        renvoie getattr (self, le nom).
+    
+    __ getitem __ (self, la clé,/)
+        renvoie self [la clé].
+      
+    __ getnewargs __ (...)
+      
+    __ gt __ (self, la valeur,/)
+        renvoie self> la valeur.
+      
+    __ le hachis __ (self,/)
+        renvoie le hachis (self).
+      
+    __ iter __ (self,/)
+        Exécutez iter (self).
+      
+    __ le __ (self, la valeur,/)
+        renvoie self <=value.
+      
+    __ len __ (self,/)
+        renvoie len (self).
+      
+    __ lt __ (self, la valeur,/)
+        renvoie self <la valeur.
+      
+    __ mod __ (self, la valeur,/)
+        renvoie self%value.
+      
+    __ mul __ (self, la valeur,/)
+        renvoie self*value.
+      
+    __ ne __ (self, la valeur,/)
+        renvoie self! =value.
+      
+    __ repr __ (self,/)
+        renvoie repr (self).
+      
+    __ rmod __ (self, la valeur,/)
+        renvoie value%self.
+      
+    __ rmul __ (self, la valeur,/)
+        renvoie value*self.
+      
+    __ sizeof __ (self,/)
+        renvoie la grandeur da la  chaîne de caractères dans la mémoire, en octets.
+      
+    __ str __ (self,/)
+        renvoie str (self).
+    
+    capitalize (self,/)
+        renvoie une version capitalisée da la  chaîne de caractères.
+              
+        Plus spécialement, faites le premier caractère avoir le haut de casse et le reste plus bas
+        cas.
+      
+    casefold (self,/)
+        renvoie une version da la  chaîne de caractères convenable pour les comparaisons caseless.
+      
+    center (self, la largeur, fillchar = '',/)
+        renvoie une ficelle centrée de largeur de longueur.
+              
+        La bourre est faite en utilisant l'indiqué remplissent le caractère (le défaut est un espace).
+      
+    compte (...)
+        S.count (sub [, commencez [, la fin]])-> int
+              
+        renvoie le nombre d'occurrences non-chevauchantes de sous-ficelle sub dans
+        cordez S [start:end]. Le début d'arguments optionnel et la fin sont
+        interprété comme dans la notation de tranche.
+      
+    encode (self,/, en encodant ='utf-8', les erreurs ='strict')
+        Encodez la  chaîne de caractères en utilisant le codec enregistré pour encoding.
+              
+        encoding
+          encoding dans quel encoder la  chaîne de caractères.
+        erreurs
+          L'erreur manipulant le projet pour utiliser d'encoder les erreurs.
+          Le défaut est le sens 'strict' que encoding des erreurs lève a
+          UnicodeEncodeError. D'autres valeurs possibles sont 'ignorent', 'remplacent' et
+          'xmlcharrefreplace' aussi bien qu'autre nom s'inscrivait avec
+          codecs.register_error qui peut manipuler UnicodeEncodeErrors.
+      
+    endswith (...)
+        S.endswith (le suffixe [, commencez [, la fin]])-> bool
+              
+        renvoie Vrai si S finit avec le suffixe indiqué, Faux autrement.
+        Avec le début optionnel, évaluez S commençant à cette position.
+        Avec la fin optionnelle, arrêtez de comparer S à cette position.
+        le suffixe peut aussi être un tuple de ficelles pour essayer.
+      
+    expandtabs (self,/, tabsize=8)
+        renvoie une copie où tous les caractères d'étiquette sont développés en utilisant des espaces.
+              
+        Si tabsize n'est pas donné, une grandeur d'étiquette de 8 caractères est supposée.
+      
+    trouver (...)
+        S.trouvez (sub [, le début [, la fin]])-> int
+              
+        renvoie l'index le plus bas dans S où la sous-ficelle sub est trouvée,
+        tel que sub est contenu dans S [start:end]. Optionnel
+        le début d'arguments et la fin sont interprétés comme dans la notation de tranche.
+              
+        renvoie-1 sur l'échec.
+      
+    format (...)
+        S.format (*args, ** kwargs)-> str
+              
+        renvoie une version formatée de S, en utilisant des substitutions d'args et de kwargs.
+        Les substitutions sont identifiées par l'appareil dentaire ({et}).
+      
+    format_map (...)
+        S.format_map (la cartographie)-> str
+              
+        renvoie une version formatée de S, en utilisant des substitutions de la cartographie.
+        Les substitutions sont identifiées par l'appareil dentaire ({et}).
+      
+    index (...)
+        S.index (sub [, commencez [, la fin]])-> int
+              
+        renvoie l'index le plus bas dans S où la sous-ficelle sub est trouvée, 
+        tel que sub est contenu dans S [start:end]. Optionnel
+        le début d'arguments et la fin sont interprétés comme dans la notation de tranche.
+        
+        ValueError d'Augmentations quand la sous-ficelle n'est pas trouvée.
+      
+    isalnum (self,/)
+        renvoie Vrai si la  chaîne de caractères est une ficelle alphanumérique, Fausse autrement.
+              
+        Une ficelle est alphanumérique si tous les caractères dans la  chaîne de caractères sont alphanumériques et
+        il y a au selfns un caractère dans la  chaîne de caractères.
+      
+    isalpha (self,/)
+        renvoie Vrai si la  chaîne de caractères est une ficelle alphabétique, Fausse autrement.
+              
+        Une ficelle est alphabétique si tous les caractères dans la  chaîne de caractères sont alphabétiques et là
+        est au selfns un caractère dans la  chaîne de caractères.
+      
+    isascii (self,/)
+        renvoie Vrai si tous les caractères dans la  chaîne de caractères sont ASCII, Faux autrement.
+              
+        Les caractères d'ASCII ont des points codés dans la gamme U 007F 0000-U.
+        la  chaîne de caractères vide est ASCII aussi.
+      
+    isdecimal (self,/)
+        renvoie Vrai si la  chaîne de caractères est une ficelle décimale, Fausse autrement.
+        
+        Une ficelle est une ficelle décimale si tous les caractères dans la  chaîne de caractères sont décimaux et
+        il y a au selfns un caractère dans la  chaîne de caractères.
+      
+    isdigit (self,/)
+        renvoie Vrai si la  chaîne de caractères est une ficelle de chiffre, Fausse autrement.
+              
+        Une ficelle est une ficelle de chiffre si tous les caractères dans la  chaîne de caractères sont des chiffres et là
+        est au selfns un caractère dans la  chaîne de caractères.
+      
+    isidentifier (self,/)
+        renvoie Vrai si la  chaîne de caractères est un identificateur de Python valide, Faux autrement.
+              
+        Utilisez keyword.iskeyword () pour évaluer pour les identificateurs réservés comme "def" et
+        "classe".
+      
+    islower (self,/)
+        renvoie Vrai si la  chaîne de caractères est une ficelle minuscule, Fausse autrement.
+              
+        Une ficelle est des minuscules si tous les caractères cased dans la  chaîne de caractères sont des minuscules et
+        il y a au selfns un caractère cased dans la  chaîne de caractères.
+      
+    isnumeric (self,/)
+        renvoie Vrai si la  chaîne de caractères est une ficelle numérale, Fausse autrement.
+        
+        Une ficelle est numérale si tous les caractères dans la  chaîne de caractères sont numéraux et il y a à
+        la selfndre partie d'un caractère dans la  chaîne de caractères.
+      
+    isprintable (self,/)
+        renvoie Vrai si la  chaîne de caractères est imprimable, Fausse autrement.
+              
+        Une ficelle est imprimable si tous ses caractères sont considérés imprimable dans
+        repr () ou si c'est vide.
+      
+    isspace (self,/)
+        renvoie Vrai si la  chaîne de caractères est une ficelle de whitespace, Fausse autrement.
+              
+        Une ficelle est whitespace si tous les caractères dans la  chaîne de caractères sont whitespace et là
+        est au selfns un caractère dans la  chaîne de caractères.
+      
+    istitle (self,/)
+        renvoie Vrai si la  chaîne de caractères est une ficelle de titre-cased, Fausse autrement.
+              
+        Dans une ficelle de titre-cased, supérieure - et des caractères de cas de titre peut seulement
+        suivez des caractères uncased et des caractères minuscules seulement cased les .
+      
+    isupper (self,/)
+        renvoie Vrai si la  chaîne de caractères est une ficelle d'uppercase, Fausse autrement.
+        
+        Une ficelle est uppercase si tous les caractères cased dans la  chaîne de caractères sont uppercase et
+        il y a au selfns un caractère cased dans la  chaîne de caractères.
+      
+    le raccord (self, iterable,/)
+        Concaténez n'importe quel nombre de ficelles.
+              
+        la  chaîne de caractères dont on appelle la méthode est insérée entre chaque ficelle donnée.
+        Le résultat est rendu comme une nouvelle ficelle.
+              
+        Exemple : '. '.join (['ab,'' pq,'' les rs'])-> 'les ab.pq.rs'
+      
+    ljust (self, la largeur, fillchar = '',/)
+        renvoie une ficelle alignée à gauche de largeur de longueur.
+              
+        La bourre est faite en utilisant l'indiqué remplissent le caractère (le défaut est un espace).
+      
+    plus bas (self,/)
+        renvoie une copie da la  chaîne de caractères convertie aux minuscules.
+      
+    lstrip (self, chars=None,/)
+        renvoie une copie da la  chaîne de caractères avec la conduite whitespace enlevé.
+              
+        Si les ombles chevaliers ne sont donnés et pas Personne, enlever des caractères dans les ombles chevaliers plutôt.
+    
+    la partition (self, sep,/)
+        Partagez la  chaîne de caractères en trois parties en utilisant le séparateur donné.
+              
+        Cela cherchera le séparateur dans la  chaîne de caractères. Si le séparateur est trouvé,
+        rend un entretien 3-tuple de la partie avant le séparateur, le séparateur
+        lui-même et la partie après que cela.
+              
+        Si le séparateur n'est pas trouvé, rend un entretien 3-tuple da la  chaîne de caractères originale
+        et deux ficelles vides.
+      
+    remplacez (self, vieux, nouveau, le compte =-1,/)
+        renvoie une copie avec toutes les occurrences de sous-ficelle vieille remplacé par nouveau.
+              
+          compte
+            Le nombre maximum d'occurrences pour remplacer.
+-1 (la valeur implicite) les moyens remplacent toutes les occurrences.
+              
+        Si le compte d'argument optionnel est donné, seulement les premières occurrences de compte sont
+        remplacé.
+      
+    rfind (...)
+        S.rfind (sub [, commencez [, la fin]])-> int
+              
+        renvoie le plus haut index dans S où la sous-ficelle sub est trouvée,
+        tel que sub est contenu dans S [start:end]. Optionnel
+        le début d'arguments et la fin sont interprétés comme dans la notation de tranche.
+              
+        renvoie-1 sur l'échec.
+      
+    rindex (...)
+        S.rindex (sub [, commencez [, la fin]])-> int
+              
+        renvoie le plus haut index dans S où la sous-ficelle sub est trouvée,
+        tel que sub est contenu dans S [start:end]. Optionnel
+        le début d'arguments et la fin sont interprétés comme dans la notation de tranche.
+              
+        ValueError d'Augmentations quand la sous-ficelle n'est pas trouvée.
+      
+    rjust (self, la largeur, fillchar = '',/)
+        renvoie une ficelle jugée de droit de largeur de longueur.
+              
+        La bourre est faite en utilisant l'indiqué remplissent le caractère (le défaut est un espace).
+      
+    rpartition (self, sep,/)
+        Partagez la  chaîne de caractères en trois parties en utilisant le séparateur donné.
+        
+        Cela cherchera le séparateur dans la  chaîne de caractères, commençant à la fin. Si
+        le séparateur est trouvé, rend un entretien 3-tuple de la partie avant le
+        le séparateur, le séparateur lui-même et la partie après que cela.
+              
+        Si le séparateur n'est pas trouvé, rend un entretien 3-tuple de deux ficelles vides
+        et la  chaîne de caractères originale.
+      
+    rsplit (self,/, sep=None, maxsplit =-1)
+        renvoie une liste des mots dans la  chaîne de caractères, en utilisant sep comme la  chaîne de caractères de terminateur.
+              
+          sep
+            Le terminateur selon quel déchirer la  chaîne de caractères.
+            Personne (la valeur implicite) la déchirure de moyens selon n'importe quel whitespace,
+            et la défausse vide des ficelles du résultat.
+          maxsplit
+            Le nombre maximum de déchirures pour faire.
+-1 (la valeur implicite) ne signifie aucune limite.
+              
+        Les déchirures sont faites en commençant à la fin da la  chaîne de caractères et en travaillant au front.
+    
+    rstrip (self, chars=None,/)
+        renvoie une copie da la  chaîne de caractères avec le suivant whitespace enlevé.
+              
+        Si les ombles chevaliers ne sont donnés et pas Personne, enlever des caractères dans les ombles chevaliers plutôt.
+      
+    la déchirure (self,/, sep=None, maxsplit =-1)
+        renvoie une liste des mots dans la  chaîne de caractères, en utilisant sep comme la  chaîne de caractères de terminateur.
+              
+        sep
+          Le terminateur selon quel déchirer la  chaîne de caractères.
+          Personne (la valeur implicite) la déchirure de moyens selon n'importe quel whitespace,
+          et la défausse vide des ficelles du résultat.
+        maxsplit
+          Le nombre maximum de déchirures pour faire.
+-1 (la valeur implicite) ne signifie aucune limite.
+      
+    splitlines (self,/, keepends=False)
+        renvoie une liste des lignes dans la  chaîne de caractères, vous cassant aux limites de ligne.
+              
+        Les pauses de ligne ne sont pas incluses dans la liste s'ensuivant à selfns que keepends ne soit donné et
+        vrai.
+      
+    startswith (...)
+        S.startswith (le préfixe [, commencez [, la fin]])-> bool
+              
+        renvoie Vrai si S commence avec le préfixe indiqué, Faux autrement.
+        Avec le début optionnel, évaluez S commençant à cette position.
+        Avec la fin optionnelle, arrêtez de comparer S à cette position.
+        le préfixe peut aussi être un tuple de ficelles pour essayer.
+      
+    la bande (self, chars=None,/)
+        renvoie une copie da la  chaîne de caractères avec la conduite et le suivant whitespace enlevé.
+              
+        Si les ombles chevaliers ne sont donnés et pas Personne, enlever des caractères dans les ombles chevaliers plutôt.
+      
+    swapcase (self,/)
+        Convertissez des caractères uppercase en caractères minuscules et minuscules à uppercase.
+      
+    le titre (self,/)
+        renvoie une version da la  chaîne de caractères où chaque mot est titlecased.
+              
+        Plus spécialement, les mots commencent avec les caractères uppercased et toute la conservation
+        les caractères de cased ont le bas de casse.
+      
+    traduisez (self, la table,/)
+        Remplacez chaque caractère dans la  chaîne de caractères en utilisant la table de traduction donnée.
+        
+          table
+            La table de traduction, qui doit être une cartographie d'ordinaux Unicode à
+            Les ordinaux d'Unicode, les ficelles, ou Personne.
+              
+        La table doit exécuter lookup/indexing via __ getitem __, par exemple a
+        dictionnaire ou liste. Si cette opération lève LookupError, le caractère est
+        quitté intact. Les caractères faits la carte à Personne ne sont effacés.
+      
+    supérieur (self,/)
+        renvoie une copie da la  chaîne de caractères convertie à uppercase.
+      
+    zfill (self, la largeur,/)
+        Rembourrez une ficelle numérale avec les zéros à gauche, remplir un champ de la largeur donnée.
+              
+        la  chaîne de caractères n'est jamais tronquée.
+      
+----------------------------------------------------------------------
+    Méthodes statiques définies ici :
+      
+    __ nouveau __ (*args, ** kwargs) de builtins.type
+        Créez et renvoie un nouvel objet. Voir l'aide (le type) pour la signature exacte.
+      
+    maketrans (x, y=None, z=None,/)
+        renvoie une table de traduction utilisable pour str.translate ().
+        
+        S'il y a seulement un argument, cela doit être un dictionnaire faisant la carte d'Unicode
+        les ordinaux (les nombres entiers) ou les caractères aux ordinaux Unicode, ficelles ou Personne.
+        Les clés de caractère seront alors converties aux ordinaux.
+        S'il y a deux arguments, ils doivent être des ficelles de longueur égale et
+        dans le dictionnaire s'ensuivant, chaque caractère dans x sera fait la carte à le
+        le caractère à la même position dans y. S'il y a un troisième argument, cela
+        doit être une ficelle, dont les caractères ne seront faits la carte à Personne dans le résultat.
+
