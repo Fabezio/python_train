@@ -1,0 +1,16 @@
+body {
+    font-family: sans-serif;
+    text-align: justify;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 100;
+}
+
+p:first-letter {
+    text-indent: 1.5em;
+}
